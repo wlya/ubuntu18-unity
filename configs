@@ -1,0 +1,19 @@
+
+
+
+
+###########tmux
+set-option -g status-position top
+set-window-option -g window-status-current-bg yellow
+set-option -g mouse on
+run-shell ~/tmux-better-mouse-mode/scroll_copy_mode.tmux
+bind-key -n M-t splitw -h -c '#{pane_current_path}'
+bind-key -n M-w splitw -v -c '#{pane_current_path}'
+bind-key -n M-i select-pane -U 
+bind-key -n M-k select-pane -D 
+bind-key -n M-u select-pane -L
+bind-key -n M-o select-pane -R 
+bind-key -n F4 new-window -c "#{pane_current_path}"
+bind-key -n F2 previous-window 
+bind-key -n F3 next-window
+set-option -g default-command bash
